@@ -1,0 +1,8 @@
+production:
+  clients:
+    default:
+      uri: <%= ENV['MONGODB_URI'] %>
+    options:
+      database: heroku_z52f237w
+      hosts:
+        - ds159033.mlab.com:59033
