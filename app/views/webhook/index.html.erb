@@ -1,0 +1,19 @@
+<table class="hover">
+  <thead>
+    <tr>
+      <% header.each do |header_name| %>
+        <th><%= header_name %></th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @webhooks.present? %>
+      <% @webhooks.each do |webhook| %>
+        <%= render partial: 'webhook', locals: { meta: to_obj(webhook.meta) } %>
+      <% end %>
+    <% else %>
+      <tr colspan='7'><td>No Data Found</td></tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @webhooks %>

@@ -1,0 +1,9 @@
+<tr>
+  <td><%= Time.at(meta.created_at).strftime("%Y-%m-%d") %></td>
+  <td><%= meta.budgets.first.name %></td>
+  <td><%= meta.supplier_name %></td>
+  <td><%= meta.status %></td>
+  <td><%= meta.creator_name %></td>
+  <td>$<%= meta.amount %></td>
+  <td><%= meta.approval_key %></td>
+</tr>
